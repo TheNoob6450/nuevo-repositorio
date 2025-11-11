@@ -1,0 +1,715 @@
+@font-face {
+  font-family: "versa";
+  src: url(../font/Versa-Versa.otf);
+}
+
+@font-face {
+  font-family: "coolvetica";
+  src: url(../font/Coolvetica.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  background-color: #007bbcff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav {
+  width: 60%;
+  height: 125px;
+  background-color: #c1121fff;
+  transform: skew(21deg);
+  border-right: 2px white solid;
+  border-left: 2px white solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li a {
+  display: inline-block;
+  transform: skew(-21deg);
+  text-decoration: none;
+  color: white;
+  font-size: 27px;
+  font-family: "versa";
+  transition: 0.4s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+#titulo {
+  font-size: 45px;
+  color: white;
+}
+
+#viewport {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/fondoUni.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: clamp(20px, 4vw, 60px);
+}
+
+#usuario,
+.ayudas {
+  position: fixed;
+  z-index: 1001;
+}
+
+#usuario {
+  right: 20px;
+  bottom: 140px;
+}
+
+#user {
+  background-color: #007bbcff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+#user:hover {
+  background-color: #c1121fff;
+}
+
+.ayudas {
+  right: 20px;
+  background-color: #007bbcff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.ayudas:nth-of-type(1) {
+  bottom: 80px;
+}
+
+.ayudas:nth-of-type(2) {
+  bottom: 20px;
+}
+
+.ayudas:hover {
+  background-color: #c1121fff;
+}
+
+#titulo_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 5vw, 40px);
+  border-top: 4px solid #007bbcff;
+  border-bottom: 4px solid #007bbcff;
+  padding: clamp(20px, 5vw, 60px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  transition: all 0.5s ease;
+}
+
+#tituloPrincipal {
+  color: white;
+  font-size: clamp(28px, 5vw, 70px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: "versa";
+  border-right: none;
+}
+
+#logoPrincipal {
+  width: clamp(150px, 30vw, 400px);
+  height: clamp(70px, 12vw, 180px);
+  background-image: url(../img/LogoUni.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#ingresar {
+  background: #007bbcff;
+  border: none;
+  font-size: clamp(18px, 2vw, 30px);
+  font-family: "versa";
+  color: white;
+  margin-top: clamp(20px, 4vw, 40px);
+  width: clamp(200px, 25vw, 350px);
+  height: clamp(45px, 6vw, 55px);
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+  transition: all 0.4s ease;
+}
+
+#ingresar span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+#ingresar:hover {
+  background: #c1121fff;
+}
+
+#contentPrincipal {
+  width: 100%;
+  height: auto;
+  background-color: #007bbcff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+#articulo {
+  max-width: 800px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(15px, 3vw, 30px);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  min-height: 650px;
+}
+
+#imagenPrincipal {
+  width: 100%;
+  height: auto;
+  max-width: 750px;
+  border-radius: 8px;
+}
+
+#tituloDescripcion {
+  font-size: clamp(22px, 3vw, 30px);
+  font-family: "versa";
+  text-align: center;
+}
+
+#descripcion {
+  text-align: justify;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-family: "coolvetica";
+  width: 100%;
+  max-width: 750px;
+}
+
+#linkDescripcion {
+  text-decoration: none;
+  color: #c1121fff;
+  font-size: clamp(18px, 2vw, 25px);
+  font-family: sans-serif;
+  margin-top: 10px;
+}
+
+#linkDescripcion:hover {
+  text-decoration: underline;
+}
+
+#anuncios {
+  width: 300px;
+  background-color: #c1121fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: clamp(10px, 2vw, 20px);
+  border-radius: 10px;
+  gap: 20px;
+  transition: all 0.4s ease;
+}
+
+#ads1, #ads2 {
+  width: 100%;
+  height: clamp(220px, 35vw, 300px);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+#ads1 { background-image: url(../img/ads1.jpg); }
+#ads2 { background-image: url(../img/ads2.png); }
+
+#ads1:hover, #ads2:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 950px) {
+  #contentPrincipal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #anuncios {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #ads1, #ads2 {
+    width: 45%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  #anuncios {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  #ads1, #ads2 {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+#contenidoSecundario {
+  width: 100%;
+  height: 100vh;
+  background-color: #c1121fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.carta {
+  width: 375px;
+  background: #007bbcff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#img-carta1, #img-carta2, #img-carta3 {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px black;
+  position: absolute;
+  top: -95px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+}
+
+#img-carta1 { background-image: url(../img/informaticaProfesion.jpg); }
+#img-carta2 { background-image: url(../img/contabilidadProfesion.jpeg); }
+#img-carta3 { background-image: url(../img/electricidadProfesion.jpg); }
+
+.carta-body {
+  padding: 24px;
+  padding-top: 120px;
+}
+
+.carta-body h5 {
+  font-size: 35px;
+  text-decoration: underline;
+  font-family: "versa";
+  color: white;
+}
+
+.carta-body p {
+  font-size: 14px;
+  margin-top: 20px;
+  font-family: "coolvetica";
+  text-align: justify;
+  color: white;
+}
+
+.carta-footer {
+  padding: 24px;
+  padding-top: 0;
+  text-align: center;
+}
+
+.btn {
+  background: #c1121fff;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: sans-serif;
+  width: 125px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px #007bbcff;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 12px black;
+  transform: translateY(-2px);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  background-color: #007bbcff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wrapper .footer-widget {
+  width: calc(20% - 30px);
+  margin: 0 15px 50px;
+  padding: 0 12px;
+}
+
+#footer-img {
+  width: 300px;
+  height: 125px;
+}
+
+#desc {
+  font-size: 17px;
+  font-family: "versa";
+}
+
+.wrapper .footer-widget:nth-child(1) {
+  width: calc(40% - 50px);
+}
+
+.wrapper .footer-widget .socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wrapper .footer-widget .socials li {
+  list-style: none;
+}
+
+.wrapper .footer-widget .socials li a {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  color: #ffffff;
+  background-color: rgba(3, 127, 243, 0.5);
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .footer-widget .socials li a:hover {
+  background-color: #c1121fff;
+}
+
+.wrapper .footer-widget h6 {
+  color: white;
+  margin: 10px 0 35px;
+  font-size: 20px;
+  font-family: "versa";
+}
+
+.wrapper .footer-widget .links li {
+  list-style: none;
+}
+
+.wrapper .footer-widget .links li a {
+  color: black;
+  font-size: 16px;
+  font-family: "coolvetica";
+  text-decoration: none;
+  line-height: 32px;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .footer-widget .links li a:hover {
+  color: white;
+}
+
+.copyright-wrapper {
+  padding: 20px 0;
+  border-top: 1px solid white;
+}
+
+.copyright-wrapper p {
+  color: white;
+  font-size: 15px;
+  font-family: "coolvetica";
+  text-align: center;
+}
+
+@media (max-width: 1229px) {
+  #anuncios{
+    width: 70%;
+    height: 200px;
+    flex-direction: row;
+  }
+
+  #ads1{
+    width: 40%;
+    height: 175px;
+  }
+
+  #ads2{
+    width: 40%;
+    height: 175px;
+  }
+}
+
+@media (max-width: 1125px) {
+  #contenidoSecundario {
+    flex-direction: column;
+    height: 1800px;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav {
+    width: 90%;
+    height: auto;
+  }
+
+  #titulo {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 45px);
+  }
+
+  #tituloPrincipal {
+    display: none;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+
+  .wrapper .footer-widget,
+  .wrapper .footer-widget:nth-child(1) {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  #user {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .ayudas {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+
+  .wrapper .footer-widget,
+  .wrapper .footer-widget:nth-child(1) {
+    width: 100%;
+    margin: 0 10px 50px;
+  }
+}
+
+#menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 123, 188, 0.95);
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 1000;
+  }
+
+  #menu.active {
+    display: flex;
+  }
+
+  #menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #menu ul li a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: "versa";
+    transition: 0.3s;
+  }
+
+  #menu ul li a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+
+  #menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+    #contenidoSecundario {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  .carta {
+    width: 90%;
+    max-width: 320px;
+    margin-bottom: 60px;
+  }
+
+  #img-carta1, #img-carta2, #img-carta3 {
+    height: 160px;
+    width: 80%;
+    top: -70px;
+  }
+
+  .carta-body {
+    padding: 20px;
+    padding-top: 90px;
+  }
+
+  .carta-body h5 {
+    font-size: 24px;
+  }
+
+  .carta-body p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .btn {
+    width: 110px;
+    height: 32px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carta {
+    width: 95%;
+    max-width: 280px;
+  }
+
+  .carta-body h5 {
+    font-size: 20px;
+  }
+
+  .carta-body p {
+    font-size: 12px;
+  }
+
+  #img-carta1, #img-carta2, #img-carta3 {
+    height: 140px;
+    top: -60px;
+  }
+}
+
+
